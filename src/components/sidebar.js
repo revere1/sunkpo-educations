@@ -15,7 +15,7 @@ class SideBar extends React.Component {
 
     componentDidMount() {
         window.addEventListener('resize', () => {
-            if(window.outerWidth >= 1024){
+            if (window.outerWidth >= 1024) {
                 this.setState({
                     mobileNavState: false
                 });
@@ -25,7 +25,7 @@ class SideBar extends React.Component {
 
     mobile_nav_button() {
         const vWidth = window.outerWidth;
-        if(vWidth <= 1024){
+        if (vWidth <= 1024) {
             this.setState({
                 mobileNavState: !this.state.mobileNavState
             });
@@ -37,7 +37,7 @@ class SideBar extends React.Component {
             <Fragment>
                 <div className="logo_wrapper">
                     <NavLink to="/" onClick={() => this.mobile_nav_button()}>
-                        <img src={`${webConfig.siteURL}/assets/graphics/logo.png`} />
+                        <img src={`${webConfig.siteURL}/assets/graphics/logo1.png`} />
                     </NavLink>
                 </div>
 
@@ -51,11 +51,11 @@ class SideBar extends React.Component {
 
                         {this.props.session.getCurrentUser === null &&
                             <ul>
-                                <li>
+                                {/* <li>
                                     <NavLink to="/users" onClick={() => this.mobile_nav_button()}>
                                         <i className="fas fa-users"></i>
                                         Users</NavLink>
-                                </li>
+                                </li> */}
                                 <li>
                                     <NavLink to="/signin" onClick={() => this.mobile_nav_button()}>
                                         <i className="fas fa-user"></i>
