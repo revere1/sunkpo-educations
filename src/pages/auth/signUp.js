@@ -5,7 +5,7 @@ import { SIGNUP_USER } from './../../queries';
 import { withRouter } from 'react-router-dom';
 import * as Cookies from 'es-cookie';
 import { Helmet } from 'react-helmet';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const initialState = {
     firstName: '',
@@ -73,7 +73,7 @@ class Signup extends React.Component {
     head() {
         return (
             <Helmet bodyAttributes={{ class: "signUpPage" }}>
-                <title>Join now! - React Starter Kit</title>
+                <title>Join now! - Sunkpo Educations</title>
             </Helmet>
         );
     }

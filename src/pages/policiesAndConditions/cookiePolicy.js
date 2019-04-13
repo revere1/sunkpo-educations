@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 
 const head = () => {
     return (
-        <Helmet bodyAttributes={{class: "cookiePolicyPage"}}>
-            <title>Cookie Policy - React Starter Kit</title>
+        <Helmet bodyAttributes={{ class: "cookiePolicyPage" }}>
+            <title>Cookie Policy - Sunkpo Educations</title>
         </Helmet>
     );
 }
@@ -12,9 +12,9 @@ const head = () => {
 const CookiePolicy = () => (
     <section className="content_block cookiePolicy">
         {head()}
-    
+
         <div className="grid">
-            
+
             <div className="column column_12_12">
                 <div className="content_wrap noBoarder">
                     <div className="title">Cookie Policy</div>

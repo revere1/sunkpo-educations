@@ -5,7 +5,7 @@ import { SIGNIN_USER } from './../../queries';
 import { withRouter } from 'react-router-dom';
 import * as Cookies from 'es-cookie';
 import { Helmet } from 'react-helmet';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const initialState = {
     email: '',
@@ -15,7 +15,7 @@ const initialState = {
 
 class Signin extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super();
         this.state = {
             ...initialState
@@ -23,7 +23,7 @@ class Signin extends React.Component {
     }
 
     clearState() {
-        this.setState({...initialState})
+        this.setState({ ...initialState })
     }
 
     handleChange(event) {
@@ -36,7 +36,7 @@ class Signin extends React.Component {
 
     handleSubmit(event, signinUser) {
         event.preventDefault();
-        signinUser().then(async ({data}) => {
+        signinUser().then(async ({ data }) => {
             Cookies.set('token', data.signinUser.token);
             await this.props.refetch();
             this.clearState();
@@ -59,17 +59,17 @@ class Signin extends React.Component {
 
     head() {
         return (
-            <Helmet bodyAttributes={{class: "logInPage"}}>
-                <title>LogIn - React Starter Kit</title>
+            <Helmet bodyAttributes={{ class: "logInPage" }}>
+                <title>LogIn - Sunkpo Educations</title>
             </Helmet>
         );
     }
 
-    render(){
+    render() {
 
         const { email, password } = this.state
         this.state;
-        
+
         return (
             <div className="column column_12_12">
                 {this.head()}
@@ -89,7 +89,7 @@ class Signin extends React.Component {
 
                                     <div className="form_wrap">
 
-                                        <div className={classNames({'error-label' : this.state.error != ''})}>
+                                        <div className={classNames({ 'error-label': this.state.error != '' })}>
                                             {this.state.error}
                                         </div>
 
@@ -123,20 +123,20 @@ class Signin extends React.Component {
                                                 Forgot your password? <NavLink to="/account-recovery">Reset here</NavLink>
                                             </p>
                                         </div>
-                                    
+
                                         <div className="form_buttons">
                                             <button type="submit" className="btn"
-                                            disabled={ loading || this.validateForm() }>
-                                            LogIn</button>
+                                                disabled={loading || this.validateForm()}>
+                                                LogIn</button>
                                         </div>
-                                    
+
                                     </div>
 
-                                </form> 
+                                </form>
 
                             );
                         }}
-                        
+
                     </Mutation>
 
                 </div>

@@ -10,8 +10,8 @@ class Dashboard extends React.Component {
 
     head() {
         return (
-            <Helmet bodyAttributes={{class: "dashboardPage"}}>
-                <title>Dashboard - React Starter Kit</title>
+            <Helmet bodyAttributes={{ class: "dashboardPage" }}>
+                <title>Dashboard - Sunkpo Educations</title>
             </Helmet>
         );
     }

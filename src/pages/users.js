@@ -10,7 +10,7 @@ class Users extends React.Component {
     head() {
         return (
             <Helmet bodyAttributes={{ class: "usersPage" }}>
-                <title>Users - React Starter Kit</title>
+                <title>Users - Sunkpo Educations</title>
             </Helmet>
         );
     }

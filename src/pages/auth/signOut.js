@@ -4,7 +4,7 @@ import * as Cookies from 'es-cookie';
 import { ApolloConsumer } from 'react-apollo';
 import { Helmet } from 'react-helmet';
 
-const handleSignout = (client,history) => {
+const handleSignout = (client, history) => {
     Cookies.remove('token');
     client.resetStore();
     history.push('/signin');
@@ -12,13 +12,13 @@ const handleSignout = (client,history) => {
 
 const head = () => {
     return (
-        <Helmet bodyAttributes={{class: "signOutPage"}}>
-            <title>LogOut - React Starter Kit</title>
+        <Helmet bodyAttributes={{ class: "signOutPage" }}>
+            <title>LogOut - Sunkpo Educations</title>
         </Helmet>
     );
 }
 
-const Signout = ({history}) => (
+const Signout = ({ history }) => (
     <div className="column column_12_12">
         {head()}
         <div className="signUp authForm">
@@ -43,13 +43,13 @@ const Signout = ({history}) => (
                                 <button onClick={() => handleSignout(client, history)} className="btn">
                                     Yes, please sign me out
                                 </button>
-                            </div>            
-                        
+                            </div>
+
                         </div>
                     );
                 }}
             </ApolloConsumer>
-        
+
         </div>
     </div>
 );

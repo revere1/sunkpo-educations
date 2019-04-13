@@ -44,7 +44,7 @@ class User extends React.Component {
                                 </div>
                                 <div className="column column_8_12">
                                     <h2>About me:</h2>
-                                    <div dangerouslySetInnerHTML={{__html: data.profilePage.bio}}></div>
+                                    <div dangerouslySetInnerHTML={{ __html: data.profilePage.bio }}></div>
                                 </div>
 
 

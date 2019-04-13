@@ -15,7 +15,7 @@ class EditProfile extends React.Component {
     head() {
         return (
             <Helmet bodyAttributes={{ class: "editProfilePage" }}>
-                <title>Edit Profile - React Starter Kit</title>
+                <title>Edit Profile - Sunkpo Educations</title>
             </Helmet>
         );
     }
@@ -39,7 +39,7 @@ class EditProfile extends React.Component {
                             if (error) return <div>error</div>
 
                             return (
-                                <EditProfileMutations profile={data.getUserProfile} refetch={this.props.refetch} session={this.props.session}  />
+                                <EditProfileMutations profile={data.getUserProfile} refetch={this.props.refetch} session={this.props.session} />
                             )
                         }}
 

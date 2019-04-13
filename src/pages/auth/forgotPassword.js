@@ -5,7 +5,7 @@ import { RESET_PASSWORD } from './../../queries';
 import { withRouter } from 'react-router-dom';
 import * as Cookies from 'es-cookie';
 import { Helmet } from 'react-helmet';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const initialState = {
     email: '',
@@ -14,7 +14,7 @@ const initialState = {
 
 class ForgotPassword extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super();
         this.state = {
             ...initialState
@@ -22,7 +22,7 @@ class ForgotPassword extends React.Component {
     }
 
     clearState() {
-        this.setState({...initialState})
+        this.setState({ ...initialState })
     }
 
     handleChange(event) {
@@ -35,7 +35,7 @@ class ForgotPassword extends React.Component {
 
     handleSubmit(event, passwordReset) {
         event.preventDefault();
-        passwordReset().then(async ({data}) => {
+        passwordReset().then(async ({ data }) => {
             this.clearState();
             this.props.history.push('/signin');
 
@@ -56,17 +56,17 @@ class ForgotPassword extends React.Component {
 
     head() {
         return (
-            <Helmet bodyAttributes={{class: "accountRecoveryPage"}}>
-                <title>Account recovery - React Starter Kit</title>
+            <Helmet bodyAttributes={{ class: "accountRecoveryPage" }}>
+                <title>Account recovery - Sunkpo Educations</title>
             </Helmet>
         );
     }
 
-    render(){
+    render() {
 
         const { email } = this.state
         this.state;
-        
+
         return (
             <div className="column column_12_12">
                 {this.head()}
@@ -88,7 +88,7 @@ class ForgotPassword extends React.Component {
 
                                         <p>Please enter the email address associated with your account and we will email you a temporary password.</p>
 
-                                        <div className={classNames({'error-label' : this.state.error != ''})}>
+                                        <div className={classNames({ 'error-label': this.state.error != '' })}>
                                             {this.state.error}
                                         </div>
 
@@ -108,20 +108,20 @@ class ForgotPassword extends React.Component {
                                                 Remembered your password? <NavLink to="/signin">Sign-in</NavLink>
                                             </p>
                                         </div>
-                                    
+
                                         <div className="form_buttons">
                                             <button type="submit" className="btn"
-                                            disabled={ loading || this.validateForm() }>
-                                            Reset</button>
+                                                disabled={loading || this.validateForm()}>
+                                                Reset</button>
                                         </div>
-                                    
+
                                     </div>
 
-                                </form> 
+                                </form>
 
                             );
                         }}
-                        
+
                     </Mutation>
 
                 </div>
