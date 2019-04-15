@@ -1,4 +1,4 @@
 {
-    "siteURL": "https://sunkpo-education.herokuapp.com",
+    "siteURL": "http://localhost:3000",
     "environment": "development"
 }
