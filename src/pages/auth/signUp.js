@@ -195,7 +195,8 @@ class Signup extends React.Component {
                                         <div className="form_buttons">
                                             <button className="btn" type="submit"
                                                 disabled={loading || this.validateForm()}>
-                                                Register</button>
+                                                Register
+                                                </button>
                                         </div>
 
                                     </div>

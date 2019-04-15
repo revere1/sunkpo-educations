@@ -3,18 +3,18 @@ import { Helmet } from 'react-helmet';
 
 const head = () => {
     return (
-        <Helmet bodyAttributes={{class: "faqPage"}}>
-            <title>FAQ - React Starter Kit</title>
+        <Helmet bodyAttributes={{ class: "faqPage" }}>
+            <title>FAQ - Sunkpo Educations</title>
         </Helmet>
     );
 }
 
 const FAQ = () => (
     <section className="content_block faq">
-    {head()}
-        
+        {head()}
+
         <div className="grid">
-            
+
             <div className="column column_12_12">
                 <div className="content_wrap noBoarder">
                     <div className="title">FAQ</div>
